@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: cap06-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cap06
+    username: postgres
+    password: Nyx@Wap#1
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: 8080
+
